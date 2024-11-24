@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AniMap - Stray Animal Accident Map</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2d6a4f;
+    }
+    #map {
+      height: 500px;
+      width: 100%;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 50%;
+    }
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-report {
+      background-color: #40916c;
+      color: #fff;
+    }
+    .btn-live {
+      background-color: #ffd60a;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AniMap - Stray Animal Accident Map</h1>
+    <div class="input-group">
+      <input
+        type="text"
+        id="location-input"
+        placeholder="Enter Accident Location"
+      />
+      <button class="btn-report" id="report-button">Report Accident</button>
+      <button class="btn-live" id="live-location-button">
+        Fetch Live Location
+      </button>
+    </div>
+    <div id="map"></div>
+  </div>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"
+  ></script>
+  <script src="script.js"></script>
+</body>
+</html>
